@@ -3,38 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <title>Document</title>
+  <title>alta</title>
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Jugueteria Cósmica</a>
+    <a class="navbar-brand" href="#">Indumentaria Attitude</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./pages/alta.html">Alta</a>
+          <a class="nav-link" href="/PAGES/alta.html">Alta</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Más Información
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./pages/contacto.html">Contacto</a></li>
+            <li><a class="dropdown-item" href="/PAGES/contacto.html">Contacto</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+          <a class="nav-link" href="/PAGES/nosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -42,29 +41,85 @@
       </ul>
       <form class="d-flex" role="search" id="searchForm">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="submit">Búsqueda</button>
       </form>
     </div>
   </div>
 </nav>
 
-<form class="container mt-4 mb-5" id="formulario">
-  <div class="mb-3">
-    <label for="nombre">Producto a ingresar</label>
-    <input type="text" class="form-control" id="nombre" placeholder="Nombre del juguete" required>
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="mb-4">Agregar Producto</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
 
-  </div>
-  <div class="mb-3">
-    <label for="precio">Precio:</label>
-    <input type="number" class="form-control" id="precio" placeholder="Precio del producto" min="0" step="0.01" required>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="precio" step="0.01" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="stock" required>
+          </div>
+        </div>
 
-  </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="marca" class="form-label">Marca</label>
+            <input type="text" class="form-control" id="marca" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="categoria" class="form-label">Categoría</label>
+            <input type="text" class="form-control" id="categoria" required>
+          </div>
+        </div>
 
-  <div class="text-center">
-    <button type="submit" class="btn btn-success w-25">Publicar Juguete</button>
-    <button type="reset" class="btn btn-danger w-25">Limpiar</button>
+        <div class="mb-3">
+          <label for="descripcionCorta" class="form-label">Descripción Corta</label>
+          <input type="text" class="form-control" id="descripcionCorta" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="descripcionLarga" class="form-label">Descripción Larga</label>
+          <textarea class="form-control" id="descripcionLarga" rows="4" required></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="envioSinCargo">
+              <label class="form-check-label" for="envioSinCargo">Envío sin cargo</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="edadDesde" class="form-label">Edad Desde</label>
+            <input type="number" class="form-control" id="edadDesde" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="edadHasta" class="form-label">Edad Hasta</label>
+            <input type="number" class="form-control" id="edadHasta" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="foto" class="form-label">Foto</label>
+          <input type="file" class="form-control" id="foto" accept="image/*" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar Producto</button>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+      </form>
+    </div>
   </div>
-</form>
+</div>
 
 
 <footer class="footer mt-5 bg-dark text-light">
@@ -72,23 +127,23 @@
     <div class="row">
 
       <div class="col-md-4">
-        <h5>Juguetería Cósmica</h5>
-        <p>Juguetes para todas las edades. Calidad, diseño y diversión.</p>
+        <h5>Indumentaria Attitude</h5>
+        <p>Prendas para todas las edades. Calidad, diseño y moda.</p>
       </div>
 
       <div class="col-md-4">
         <h5>Navegación</h5>
         <ul class="list-unstyled">
-          <li><a href="./index.html" class="text-light text-decoration-none">Inicio</a></li>
-          <li><a href="./alta.html" class="text-light text-decoration-none">Alta</a></li>
-          <li><a href="./pages/nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
-          <li><a href="./pages/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+          <li><a href="/index.html" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="/PAGES/alta.html" class="text-light text-decoration-none">Alta</a></li>
+          <li><a href="/PAGES/nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
+          <li><a href="/PAGES/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
         </ul>
       </div>
 
       <div class="col-md-4">
         <h5>Contacto</h5>
-        <p>Email: contacto@jugueteriacosmica.com</p>
+        <p>Email: contacto@indumentariaattitude.com</p>
         <p>Tel: 11 1234-5678</p>
       </div>
 
@@ -97,11 +152,10 @@
     <hr class="border-light">
 
     <p class="text-center mb-0">
-      © 2025 Juguetería Cósmica — Todos los derechos reservados
+      © 2025 Indumentaria Attitude — Todos los derechos reservados
     </p>
   </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
