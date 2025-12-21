@@ -3,160 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alta</title>
+  <title>Alta</title>
+
+  <link rel="stylesheet" href="/CSS/index.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Indumentaria Attitude</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/PAGES/alta.html">Alta</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Más Información
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/PAGES/contacto.html">Contacto</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/PAGES/nosotros.html">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
+  <nav class="header">
+    <div class="header__container">
+      <a class="header__brand" href="../index.html">Indumentaria Attitude</a>
+
+      <ul class="header__nav">
+        <li><a href="../index.html" class="header__link">Inicio</a></li>
+        <li><a href="./alta.html" class="header__link header__link--active">Alta</a></li>
+        <li><a href="./contacto.html" class="header__link">Contacto</a></li>
+        <li><a href="./nosotros.html" class="header__link">Nosotros</a></li>
       </ul>
-      <form class="d-flex" role="search" id="searchForm">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
-        <button class="btn btn-outline-success" type="submit">Búsqueda</button>
+
+      <form class="search" id="searchForm">
+        <input type="search" placeholder="Buscar" id="search">
+        <button type="submit" class="btn btn--primary">Búsqueda</button>
       </form>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container mt-5 mb-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h2 class="mb-4">Agregar Producto</h2>
-      <form>
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required>
+  <main class="container">
+
+    <section class="alta">
+      <h1 class="alta__title">Agregar Producto</h1>
+
+      <form class="form alta__form">
+
+        <div class="form__group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required>
         </div>
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="precio" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="precio" step="0.01" required>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" step="0.01" required>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="stock" class="form-label">Stock</label>
-            <input type="number" class="form-control" id="stock" required>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="marca" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="marca" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="categoria" class="form-label">Categoría</label>
-            <input type="text" class="form-control" id="categoria" required>
+          <div class="form__group">
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" required>
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="descripcionCorta" class="form-label">Descripción Corta</label>
-          <input type="text" class="form-control" id="descripcionCorta" required>
-        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" required>
+          </div>
 
-        <div class="mb-3">
-          <label for="descripcionLarga" class="form-label">Descripción Larga</label>
-          <textarea class="form-control" id="descripcionLarga" rows="4" required></textarea>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="envioSinCargo">
-              <label class="form-check-label" for="envioSinCargo">Envío sin cargo</label>
-            </div>
+          <div class="form__group">
+            <label for="categoria">Categoría</label>
+            <input type="text" id="categoria" required>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="edadDesde" class="form-label">Edad Desde</label>
-            <input type="number" class="form-control" id="edadDesde" required>
+        <div class="form__group">
+          <label for="descripcionCorta">Descripción Corta</label>
+          <input type="text" id="descripcionCorta" required>
+        </div>
+
+        <div class="form__group">
+          <label for="descripcionLarga">Descripción Larga</label>
+          <textarea id="descripcionLarga" rows="4" required></textarea>
+        </div>
+
+        <div class="form__group form__group--checkbox">
+          <input type="checkbox" id="envioSinCargo">
+          <label for="envioSinCargo">Envío sin cargo</label>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label for="edadDesde">Edad Desde</label>
+            <input type="number" id="edadDesde" required>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="edadHasta" class="form-label">Edad Hasta</label>
-            <input type="number" class="form-control" id="edadHasta" required>
+
+          <div class="form__group">
+            <label for="edadHasta">Edad Hasta</label>
+            <input type="number" id="edadHasta" required>
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="foto" class="form-label">Foto</label>
-          <input type="file" class="form-control" id="foto" accept="image/*" required>
+        <div class="form__group">
+          <label for="foto">Foto</label>
+          <input type="file" id="foto" accept="image/*" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
-        <button type="reset" class="btn btn-secondary">Limpiar</button>
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">Agregar Producto</button>
+          <button type="reset" class="btn btn--secondary">Limpiar</button>
+        </div>
+
       </form>
-    </div>
-  </div>
-</div>
+    </section>
 
+  </main>
 
-<footer class="footer mt-5 bg-dark text-light">
-  <div class="container py-4">
-    <div class="row">
+  <footer class="footer">
+    <div class="footer__container">
 
-      <div class="col-md-4">
-        <h5>Indumentaria Attitude</h5>
+      <div class="footer__section">
+        <h3>Indumentaria Attitude</h3>
         <p>Prendas para todas las edades. Calidad, diseño y moda.</p>
       </div>
 
-      <div class="col-md-4">
-        <h5>Navegación</h5>
-        <ul class="list-unstyled">
-          <li><a href="/index.html" class="text-light text-decoration-none">Inicio</a></li>
-          <li><a href="/PAGES/alta.html" class="text-light text-decoration-none">Alta</a></li>
-          <li><a href="/PAGES/nosotros.html" class="text-light text-decoration-none">Nosotros</a></li>
-          <li><a href="/PAGES/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+      <div class="footer__section">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./alta.html">Alta</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
         </ul>
       </div>
 
-      <div class="col-md-4">
-        <h5>Contacto</h5>
+      <div class="footer__section">
+        <h3>Contacto</h3>
         <p>Email: contacto@indumentariaattitude.com</p>
         <p>Tel: 11 1234-5678</p>
       </div>
 
     </div>
 
-    <hr class="border-light">
-
-    <p class="text-center mb-0">
+    <p class="footer__copy">
       © 2025 Indumentaria Attitude — Todos los derechos reservados
     </p>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </footer>
 
 </body>
 </html>

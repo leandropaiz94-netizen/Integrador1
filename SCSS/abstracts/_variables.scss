@@ -1,0 +1,21 @@
+// Colores base
+$color-black: #0f0f0f;
+$color-white: #ffffff;
+$color-gray: #9ca3af;
+
+$color-gold: #c9a227;
+$color-silver: #cfd2d6;
+
+// Tipografías
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ms+Madi&display=swap');
+
+$font-primary: 'Ms Madi', italic;
+$font-secondary: 'Lobster', sans-serif;
+
+// Layout
+$container-width: 1200px;
+$border-radius: 12px;
+
+// Transiciones
+$transition-base: all 0.3s ease;
+
