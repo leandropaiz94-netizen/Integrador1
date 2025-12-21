@@ -1,11 +1,16 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: $color-dark;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
 
   .nav {
-    @include flex-center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .nav-list {
       list-style: none;

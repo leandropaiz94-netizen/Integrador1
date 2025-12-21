@@ -32,7 +32,6 @@
   }
 }
 
-// Responsivo
 @include responsive(tablet) {
   .search {
     flex-direction: column;
