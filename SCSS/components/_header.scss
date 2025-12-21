@@ -1,0 +1,30 @@
+.header {
+  background-color: $color-dark;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .nav {
+    @include flex-center;
+    justify-content: space-between;
+
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+
+      .nav-item {
+        .nav-link {
+          color: $color-primary;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
