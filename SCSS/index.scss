@@ -1,13 +1,20 @@
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
+/* ABSTRACTS */
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
-@use 'base/reset';
-@use 'base/base';
-@use 'base/typography';
+/* BASE */
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
 
-@use 'components/header';
-@use 'components/cards';
-@use 'components/buttons';
-@use 'components/forms';
+/* COMPONENTS */
+@use "components/header";
+@use "components/footer";
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
 
-// @use 'pages/home';
+/* PAGES */
+@use "pages/alta";
+@use "pages/contacto";
+@use "pages/nosotros";

@@ -2,6 +2,8 @@ $color-black: #0f0f0f;
 $color-white: #ffffff;
 $color-gray: #9ca3af;
 
+$color-light: #f5f5f5;
+
 $color-gold: #c9a227;
 $color-silver: #cfd2d6;
 
@@ -10,7 +12,7 @@ $color-primary: $color-white;
 $color-secondary: $color-gray;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ms+Madi&display=swap');
 
 $font-primary: 'Ms Madi', italic;
 $font-secondary: 'Lobster', sans-serif;

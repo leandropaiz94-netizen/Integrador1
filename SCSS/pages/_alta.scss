@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.alta {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+
+  background: v.$color-dark;
+  color: v.$color-primary;
+  border-radius: v.$radius;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  text-align: center;
+
+  &__title {
+    font-family: v.$font-secondary;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.form__row {
+  display: flex;
+  gap: 1.5rem;
+
+  @include m.mobile {
+    flex-direction: column;
+  }
+}
+
+.form__group--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  input {
+    accent-color: goldenrod;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+}
+
+input[type="file"] {
+  padding: 0.4rem;
+  border: 1px dashed rgba(218, 165, 32, 0.5);
+  border-radius: v.$radius;
+  background: rgba(255, 215, 0, 0.05);
+  color: v.$color-primary;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  @include m.mobile {
+    flex-direction: column;
+  }
+}

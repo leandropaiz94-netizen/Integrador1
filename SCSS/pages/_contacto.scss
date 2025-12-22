@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.contacto {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+
+  background: v.$color-dark;
+  color: v.$color-primary;
+  border-radius: v.$radius;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(192, 192, 192, 0.35);
+  text-align: center;
+  outline: 4px solid gold;
+
+  &__title {
+    font-family: v.$font-secondary;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.4rem;
+
+  label {
+    font-size: 0.9rem;
+    color: v.$color-light;
+  }
+
+  input,
+  textarea {
+    padding: 0.75rem;
+    border-radius: v.$radius;
+    border: 1px solid rgba(192, 192, 192, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    color: v.$color-primary;
+    font-family: v.$font-primary;
+
+    &:focus {
+      outline: none;
+      border-color: silver;
+      box-shadow: 0 0 0 2px rgba(192, 192, 192, 0.25);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.form__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

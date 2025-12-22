@@ -1,33 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
 .footer {
-  background-color: $color-dark;
-  color: $color-primary;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  background-color: v.$color-dark;
+  color: v.$color-primary;
+  padding: 2rem 1rem;
 
-  .footer-content {
-    @include flex-center;
-    flex-direction: column;
-    gap: 0.5rem;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 
-    .social-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
+  &__section {
+    flex: 1 1 200px;
 
+    h3 {
+      color: v.$color-gold;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
       li {
-        a {
-          color: $color-primary;
-          text-decoration: none;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: $color-secondary;
-          }
-        }
+        margin-bottom: 0.25rem;
       }
     }
+  }
+
+  &__copy {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: v.$color-secondary;
   }
 }
