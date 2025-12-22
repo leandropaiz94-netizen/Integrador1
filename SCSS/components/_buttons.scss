@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use 'sass:color';
+
+.btn {
+  @include m.flex-center;
+  padding: 0.6rem 1.2rem;
+  border-radius: v.$border-radius;
+  border: none;
+  font-family: v.$font-secondary;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: v.$transition-base;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: v.$color-gold;
+  color: v.$color-black;
+
+  &:hover {
+    background-color: color.adjust(v.$color-gold, $lightness: -10%);
+  }
+}
+
+
+.btn--secondary {
+  background-color: transparent;
+  color: v.$color-white;
+  border: 1px solid v.$color-silver;
+
+  &:hover {
+    background-color: v.$color-silver;
+    color: v.$color-black;
+  }
+}
+
+
+.btn--sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn--block {
+  width: 100%;
+}

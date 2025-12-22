@@ -1,14 +1,13 @@
-// abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
 
-// base
-@import 'base/reset';
-@import 'base/base';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/base';
+@use 'base/typography';
 
-// components
-@import 'components/header';
-@import 'components/footer';
-@import 'components/cards';
-@import 'components/forms';
+@use 'components/header';
+@use 'components/cards';
+@use 'components/buttons';
+@use 'components/forms';
+
+// @use 'pages/home';

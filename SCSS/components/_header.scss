@@ -1,35 +1,71 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $color-dark;
-  padding: 1rem;
+  background-color: v.$color-black;
   z-index: 1000;
+}
 
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header__container {
+  max-width: v.$container-width;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-    .nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
+.header__brand {
+  font-family: v.$font-secondary;
+  font-size: 1.4rem;
+  color: v.$color-white;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-      .nav-item {
-        .nav-link {
-          color: $color-primary;
-          text-decoration: none;
-          transition: color 0.3s ease;
+.header__nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-          &:hover {
-            color: $color-secondary;
-          }
-        }
-      }
-    }
+.header__link {
+  color: v.$color-white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: v.$transition-base;
+
+  &:hover,
+  &--active {
+    color: v.$color-gold;
+  }
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+@include m.tablet {
+  .header__container {
+    flex-wrap: wrap;
+  }
+
+  .header__nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: center;
   }
 }

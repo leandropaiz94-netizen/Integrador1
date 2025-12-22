@@ -1,3 +1,7 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use 'sass:color';
+
 .search {
   display: flex;
   gap: 0.5rem;
@@ -5,38 +9,41 @@
 
   input[type="search"] {
     padding: 0.5rem 0.75rem;
-    border-radius: $radius;
-    border: 1px solid $color-secondary;
-    font-family: $font-primary;
-    transition: all 0.3s ease;
+    border-radius: v.$border-radius;
+    border: 1px solid v.$color-gray;
+    font-family: v.$font-primary;
+    transition: v.$transition-base;
 
     &:focus {
-      border-color: $color-primary;
+      border-color: v.$color-gold;
       outline: none;
-      box-shadow: 0 0 5px rgba($color-primary, 0.5);
+      box-shadow: 0 0 5px color.adjust(v.$color-gold, $alpha: -0.5);
     }
   }
 
   .btn--primary {
     padding: 0.5rem 1rem;
-    border-radius: $radius;
+    border-radius: v.$border-radius;
     border: none;
-    background: $color-primary;
-    color: $color-dark;
+    background: v.$color-gold;
+    color: v.$color-black;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: v.$transition-base;
 
     &:hover {
-      background: darken($color-primary, 10%);
+      background: color.adjust(v.$color-gold, $lightness: -10%);
     }
   }
 }
 
-@include responsive(tablet) {
+@include m.tablet {
   .search {
     flex-direction: column;
-    input, .btn--primary {
+
+    input,
+    .btn--primary {
       width: 100%;
     }
   }
 }
+

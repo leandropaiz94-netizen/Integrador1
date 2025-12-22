@@ -15,11 +15,3 @@
     @content;
   }
 }
-
-.header {
-  padding: 2rem;
-
-  @include mobile {
-    padding: 1rem;
-  }
-}

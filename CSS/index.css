@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ms+Madi&display=swap");
-.header {
-  padding: 2rem;
-}
-@media (max-width: 480px) {
-  .header {
-    padding: 1rem;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +10,7 @@ body {
   background-color: #0f0f0f;
   color: #ffffff;
   line-height: 1.6;
+  padding-top: 60px;
 }
 
 a {
@@ -28,6 +20,37 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Ms Madi", italic;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 h1, h2, h3, h4 {
@@ -37,18 +60,187 @@ h1, h2, h3, h4 {
 
 p {
   color: #9ca3af;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
 }
 
-/* @use 'layout/header';
-@use 'layout/footer';
-@use 'layout/grid';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f0f0f;
+  z-index: 1000;
+}
 
-@use 'components/buttons';
-@use 'components/cards';
-@use 'components/forms';
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-@use 'pages/home';
-@use 'pages/contacto'; */
+.header__brand {
+  font-family: "Lobster", sans-serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-/*# sourceMappingURL=index.css.map */
+.header__nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.header__link:hover, .header__link--active {
+  color: #c9a227;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+  .header__nav {
+    width: 100%;
+    justify-content: center;
+  }
+  .search {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.card {
+  background: #0f0f0f;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 0 1 250px;
+}
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #cfd2d6;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+  font-family: "Lobster", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: #c9a227;
+  color: #0f0f0f;
+}
+.btn--primary:hover {
+  background-color: rgb(158.2875, 127.575, 30.7125);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #cfd2d6;
+}
+.btn--secondary:hover {
+  background-color: #cfd2d6;
+  color: #0f0f0f;
+}
+
+.btn--sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.search input[type=search] {
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #9ca3af;
+  font-family: "Ms Madi", italic;
+  transition: all 0.3s ease;
+}
+.search input[type=search]:focus {
+  border-color: #c9a227;
+  outline: none;
+  box-shadow: 0 0 5px rgba(201, 162, 39, 0.5);
+}
+.search .btn--primary {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: #c9a227;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.search .btn--primary:hover {
+  background: rgb(158.2875, 127.575, 30.7125);
+}
+
+@media (max-width: 768px) {
+  .search {
+    flex-direction: column;
+  }
+  .search input,
+  .search .btn--primary {
+    width: 100%;
+  }
+}
