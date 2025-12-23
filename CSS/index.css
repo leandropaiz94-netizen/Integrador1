@@ -29,7 +29,11 @@ ul {
 
 /* ABSTRACTS */
 html {
-  font-size: 16px;
+  font-size: 24px;
+}
+
+* {
+  font-size: inherit;
 }
 
 body {
@@ -64,8 +68,27 @@ h1, h2, h3, h4 {
 
 p {
   color: #9ca3af;
-  font-size: 1.05rem;
   margin-bottom: 0.75rem;
+}
+
+.about__text {
+  font-size: 1rem !important;
+}
+
+.header__link {
+  font-size: 1rem !important;
+}
+
+.footer__section p {
+  font-size: 1rem !important;
+}
+
+.header__brand {
+  font-size: 1.2rem !important;
+}
+
+.footer {
+  font-size: 1rem !important;
 }
 
 /* COMPONENTS */
