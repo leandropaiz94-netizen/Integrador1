@@ -1,13 +1,10 @@
-/* ABSTRACTS */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ms+Madi&display=swap");
-/* BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ABSTRACTS */
 body {
   font-family: "Ms Madi", italic;
   background-color: #0f0f0f;
@@ -27,7 +24,6 @@ ul {
   margin: 0;
 }
 
-/* ABSTRACTS */
 html {
   font-size: 24px;
 }
@@ -91,8 +87,6 @@ p {
   font-size: 1rem !important;
 }
 
-/* COMPONENTS */
-/* ABSTRACTS */
 .header {
   position: fixed;
   top: 0;
@@ -156,7 +150,6 @@ p {
     justify-content: center;
   }
 }
-/* ABSTRACTS */
 .footer {
   background-color: #0f0f0f;
   color: #ffffff;
@@ -187,7 +180,6 @@ p {
   color: #9ca3af;
 }
 
-/* ABSTRACTS */
 .btn {
   display: flex;
   justify-content: center;
@@ -230,7 +222,6 @@ p {
   width: 100%;
 }
 
-/* ABSTRACTS */
 .cards-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -267,7 +258,6 @@ p {
   transform: scale(1.1);
 }
 
-/* ABSTRACTS */
 .search {
   display: flex;
   gap: 0.5rem;
@@ -307,8 +297,6 @@ p {
     width: 100%;
   }
 }
-/* PAGES */
-/* ABSTRACTS */
 .alta {
   max-width: 900px;
   margin: 3rem auto;
@@ -374,7 +362,6 @@ input[type=file] {
   }
 }
 
-/* ABSTRACTS */
 .contacto {
   max-width: 700px;
   margin: 3rem auto;
@@ -432,7 +419,6 @@ input[type=file] {
   margin-top: 1rem;
 }
 
-/* ABSTRACTS */
 .about {
   max-width: 800px;
   margin: 3rem auto;
@@ -477,4 +463,8 @@ input[type=file] {
   width: 100%;
   max-width: 500px;
   color: #f5f5f5;
+}
+
+main {
+  margin-top: 60px;
 }

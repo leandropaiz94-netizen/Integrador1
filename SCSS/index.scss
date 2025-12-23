@@ -1,20 +1,24 @@
-/* ABSTRACTS */
+
 @use "abstracts/variables";
 @use "abstracts/mixins";
 
-/* BASE */
+
 @use "base/reset";
 @use "base/base";
 @use "base/typography";
 
-/* COMPONENTS */
+
 @use "components/header";
 @use "components/footer";
 @use "components/buttons";
 @use "components/cards";
 @use "components/forms";
 
-/* PAGES */
+
 @use "pages/alta";
 @use "pages/contacto";
 @use "pages/nosotros";
+
+main {
+  margin-top: 60px;
+}
